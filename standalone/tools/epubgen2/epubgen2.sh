@@ -56,7 +56,7 @@ EOF
 }
 
 #default values for input variables
-BLANG=Latin
+BLANG=English
 YEAR_FROM=`date +%Y`
 YEAR_TO=$YEAR_FROM
 PRIEST='' #has to be empty or '&priest=yes'
@@ -65,10 +65,10 @@ MISSA='' #=1 to include Mass propers
 CDUR=$(pwd)
 EPUBDIR=$CDUR/output #output directory, defaults to "output" subdirectory in the folder this script is in.
 COVER_FILENAME=cover.jpg #a jpg file name to serve as cover (it has to exist in SOURCEDATADIR) #ascensio.jpg
-RUBRICS_CODE=1960
-RUBRICS=Rubrics%201960
+RUBRICS_CODE=DA
+RUBRICS=Divino%20Afflatu
 RUBRICS_NAME=
-NOFANCYCHARS=1 #0 or 1; when 1, "fancy" characters such as  ℟ ℣ +︎ ✠ ✙︎ are replaced with R. V. + + +
+NOFANCYCHARS=0 #0 or 1; when 1, "fancy" characters such as  ℟ ℣ +︎ ✠ ✙︎ are replaced with R. V. + + +
 OPTIONAL_KINDLEGEN_PATH=/usr/local/bin/kindlegen #full path to kindlegen executable, if exists, used to convert the resulting EPUB files to MOBI format as well
 
 #constants
