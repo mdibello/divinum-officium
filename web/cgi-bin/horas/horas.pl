@@ -981,7 +981,7 @@ sub Domine_labia : ScriptFunc {
 #returns the text of the martyrologium for the day
 sub martyrologium : ScriptFunc {
   my $lang = shift;
-  my $t = setfont($largefont, "Martyrologium ") . setfont($smallblack, "(anticip.)") . "\n";
+  my $t = setfont($largefont, "Martyrologium ") . "\n";
 
   my $a = getweek($day, $month, $year, 1) . "-" . (($dayofweek + 1) % 7);
   my %a = %{setupstring($lang, "Martyrologium/Mobile.txt")};
@@ -1007,7 +1007,7 @@ sub martyrologium : ScriptFunc {
 
   #if ($month == 12 && $day == 25 && exists($a{'Nativity'})) {$mobile = $a{'Nativity'}; $hd = 1;}
   if ($hd == 1) { $t = "v. $mobile" . "_\n$t"; $mobile = ''; }
-  $fname = nextday($month, $day, $year);
+  $fname = get_sday($month, $day, $year);
   my ($m, $d) = split('-', $fname);
   my $y = ($m == 1 && $d == 1) ? $year + 1 : $year;
 
